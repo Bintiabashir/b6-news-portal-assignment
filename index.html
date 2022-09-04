@@ -13,9 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="container mx-auto px-20">
+<body class="container mx-auto px-20 bg-stone-100">
     <header>
-        <nav class="navbar bg-base-100">
+        <nav class="navbar">
             <div class="flex-1">
                 <a class=" text-xl font-bold"><span class=" text-violet-500 ">News
                     </span>
@@ -31,14 +31,23 @@
 
         <hr>
 
-        <ul id="news-categories" class="flex justify-evenly py-5 text-zinc-500">
+        <div id="news-categories-name" class="flex justify-evenly py-5 text-zinc-500">
 
-        </ul>
+        </div>
     </header>
 
     <main>
         <section>
+            <div id="founded-data" class="height-5 bg-white m-5">
+                no data found
+            </div>
+            <div>
+                sort by view
+            </div>
 
+        </section>
+
+        <section id="news-categories-container">
         </section>
     </main>
 

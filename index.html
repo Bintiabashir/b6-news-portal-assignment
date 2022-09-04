@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- title  -->
     <title>News Time</title>
+    <!-- font-awesome  -->
+    <script src="https://kit.fontawesome.com/fe8c24d9f1.js" crossorigin="anonymous"></script>
     <!-- tailwind cdn  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- daisyUI cdn  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="container mx-auto px-20 bg-stone-100">
+<body class="container mx-auto px-24 ">
+
     <header>
+        <!-- navbar  -->
         <nav class="navbar">
             <div class="flex-1">
                 <a class=" text-xl font-bold"><span class=" text-violet-500 ">News
@@ -24,31 +28,67 @@
             <div class="flex-none">
                 <ul class="menu menu-horizontal p-0 text-zinc-400">
                     <li><a>News</a></li>
-                    <li><a>Blog</a></li>
+                    <!-- blog-modal  -->
+                    <li>
+                        <label for="my-modal-6" onclick="displayBlog()">Blog</label>
+                        <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                        <div class="modal">
+                            <div class="modal-box relative">
+                                <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                                <div id="modal-blog-body">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
         </nav>
 
         <hr>
-
+        <!-- menu of news-categories -->
         <div id="news-categories-name" class="flex justify-evenly py-5 text-zinc-500">
 
         </div>
     </header>
 
     <main>
+
         <section>
-            <div id="founded-data" class="height-5 bg-white m-5">
+            <!-- founded items -->
+            <div id="founded-data" class="height-5 bg-violet-500 p-3 px-7 rounded m-4">
                 no data found
             </div>
-            <div>
-                sort by view
+
+        </section>
+        <!-- spinner  -->
+
+        <progress id="spinner" class="progress progress-primary w-full hidden"></progress>
+
+
+        <!-- news-container  -->
+        <section id="news-categories-container" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        </section>
+
+        <!-- modal  -->
+        <section>
+
+            <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box relative">
+                    <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <div id="modal-body">
+
+                    </div>
+                </div>
             </div>
-
         </section>
 
-        <section id="news-categories-container">
-        </section>
+
+
+
+
     </main>
 
 

@@ -1,3 +1,4 @@
+// menubar load and display 
 const loadNewsName = async () => {
     const url = `https://openapi.programming-hero.com/api/news/categories`
     try {
@@ -9,7 +10,6 @@ const loadNewsName = async () => {
         console.log(error);
     }
 }
-
 
 const displayNewsName = newsNames => {
     const newsCategoriesName = document.getElementById('news-categories-name');
@@ -25,6 +25,7 @@ const displayNewsName = newsNames => {
 
 }
 
+// news load and display 
 const loadCategoriesNews = async (categoryId, categoryName) => {
 
     const spinner = document.getElementById('spinner');
@@ -46,7 +47,7 @@ const displayCategoriesNews = (categories, categoryName) => {
 
 
     const foundedData = document.getElementById('founded-data');
-    foundedData.innerText = `${categories.length} items found for this category ${categoryName}`
+    foundedData.innerText = `${categories.length == 0 ? "no" : categories.length} items found for this category ${categoryName}`
 
 
 
@@ -77,9 +78,13 @@ const displayCategoriesNews = (categories, categoryName) => {
         </div>
     </div>`
         newsCategoriesContainer.appendChild(categoriesDiv)
+
     });
+
     spinner.classList.add('hidden');
 }
+
+
 
 const loadNewsDetails = async id => {
     const url = ` https://openapi.programming-hero.com/api/news/${id}`;

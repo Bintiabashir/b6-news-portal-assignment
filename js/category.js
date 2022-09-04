@@ -127,7 +127,7 @@ function displayBlog() {
         why we use template string in javascript?
         </div>
         <div class="collapse-content">
-            <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements</p>
+            <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements.</p>
         </div>
     </div> 
     <div tabindex="0"
@@ -138,6 +138,16 @@ function displayBlog() {
         </div>
         <div class="collapse-content">
             <p>The main difference between forEach and filter is that forEach just loop over the array and executes the callback but filter executes the callback and check its return value.Map like filter & foreach takes a callback and run it against every element on the array but whats makes it unique is it generate a new array based on your existing array. When we want to select a single element from an array ,we use find.</p>
+        </div>
+    </div>
+    <div tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <div class="collapse-title text-xl font-medium">
+        What is the difference between var,let and const in JavaScript?
+
+        </div>
+        <div class="collapse-content">
+            <p>var and let can be updated and re-declared into the scope but cons cannot be updated or re-declared into the scope.The scope of a var variable is functional scope whereas The scope of a let and const variable is block scope.</p>
         </div>
     </div>`;
 

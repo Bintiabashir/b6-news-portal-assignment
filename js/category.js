@@ -84,7 +84,7 @@ const displayCategoriesNews = (categories, categoryName) => {
     spinner.classList.add('hidden');
 }
 
-
+// news details load and display 
 
 const loadNewsDetails = async id => {
     const url = ` https://openapi.programming-hero.com/api/news/${id}`;
@@ -122,6 +122,8 @@ const displayNewsDetails = newsDetails => {
     });
 
 }
+
+// a function to display blog section 
 
 function displayBlog() {
     const modalBlogBody = document.getElementById('modal-blog-body');

@@ -1,4 +1,5 @@
 // menubar load  
+
 const loadNewsName = async () => {
     const url = `https://openapi.programming-hero.com/api/news/categories`
     try {
@@ -11,6 +12,7 @@ const loadNewsName = async () => {
     }
 }
 // menubar display 
+
 const displayNewsName = newsNames => {
     const newsCategoriesName = document.getElementById('news-categories-name');
     newsNames.forEach(name => {
@@ -43,6 +45,7 @@ const loadCategoriesNews = async (categoryId, categoryName) => {
 }
 
 // news display 
+
 const displayCategoriesNews = (categories, categoryName) => {
 
 

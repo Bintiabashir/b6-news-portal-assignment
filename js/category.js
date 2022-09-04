@@ -1,4 +1,4 @@
-// menubar load and display 
+// menubar load  
 const loadNewsName = async () => {
     const url = `https://openapi.programming-hero.com/api/news/categories`
     try {
@@ -10,7 +10,7 @@ const loadNewsName = async () => {
         console.log(error);
     }
 }
-
+// menubar display 
 const displayNewsName = newsNames => {
     const newsCategoriesName = document.getElementById('news-categories-name');
     newsNames.forEach(name => {
@@ -25,7 +25,7 @@ const displayNewsName = newsNames => {
 
 }
 
-// news load and display 
+// news load  
 const loadCategoriesNews = async (categoryId, categoryName) => {
 
     const spinner = document.getElementById('spinner');
@@ -42,7 +42,7 @@ const loadCategoriesNews = async (categoryId, categoryName) => {
     }
 }
 
-
+// news display 
 const displayCategoriesNews = (categories, categoryName) => {
 
 
@@ -84,7 +84,7 @@ const displayCategoriesNews = (categories, categoryName) => {
     spinner.classList.add('hidden');
 }
 
-// news details load and display 
+// news details load 
 
 const loadNewsDetails = async id => {
     const url = ` https://openapi.programming-hero.com/api/news/${id}`;
@@ -97,7 +97,7 @@ const loadNewsDetails = async id => {
         console.log(error);
     }
 }
-
+// news details display 
 const displayNewsDetails = newsDetails => {
     const modalBody = document.getElementById('modal-body');
     newsDetails.forEach(news => {

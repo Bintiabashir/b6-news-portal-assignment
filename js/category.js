@@ -30,7 +30,7 @@ const displayNewsName = newsNames => {
     let nameArray = [];
     for (const name of names) {
         nameArray.push(name);
-
+        nameArray[0].style.color = "purple";
         name.addEventListener("click", (event) => {
             nameArray.forEach(nameOfArray => {
                 nameOfArray.style.color = "";
@@ -182,5 +182,5 @@ function displayBlog() {
 
 
 
-loadCategoriesNews('08', 'All News');
+loadCategoriesNews('01', 'Breaking News');
 loadNewsName();

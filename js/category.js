@@ -72,23 +72,26 @@ const displayCategoriesNews = (categories, categoryName) => {
 
     categories.forEach(category => {
         const categoriesDiv = document.createElement('div');
-        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-2xl m-7 h-full">
-        <img src="${category.thumbnail_url}" class="m-5" />
+        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-xl m-7 h-full">
+        <img src="${category.thumbnail_url}" class="m-5">
         <div class="card-body">
-            <h2 class="card-title">${category.title.length > 60 ? category.title.slice(0, 60) + '...' : category.title}</h2>
-            <p>${category.details.length > 100 ? category.details.slice(0, 100) + '...' : category.details}</p>
+            <h2 class="card-title font-bold">${category.title.length > 100 ? category.title.slice(0, 100) + '...' : category.title}</h2>
+            <p class="text-gray-400">${category.details.length > 500 ? category.details.slice(0, 500) + '...' : category.details}</p>
             
             <div class="card-actions justify-between items-center">
-            <div class='flex flex-col items-center'>
+            <div class='flex items-center'>
             <img src='${category.author.img}'class="w-10 rounded-full h-10 mr-2" alt="">
-                <p> ${category.author.name == null ? category.author.name = 'no author found' : category.author.name}</p>
+                <div>
+                <p class="font-bold text-zinc-600"> ${category.author.name == null ? category.author.name = 'no author found' : category.author.name}</p>
+                <p class="text-gray-500"> ${category.author.published_date == null ? category.published_date = 'no data found' : category.author.published_date}</p>
             </div>
-            <div class='flex flex-col items-center'>
-            <i class="fa-regular fa-eye"></i>
-                <p> ${category.total_view == null | category.total_view == 0 ? category.total_view = 'no view' : category.total_view}</p>
+            </div>
+            <div class='flex items-center m-1'>
+            <a><i class="fa-regular fa-eye"></i><a/>
+                <p class="p-2 font-semibold text-zinc-700"> ${category.total_view == null | category.total_view == 0 ? category.total_view = 'no view' : category.total_view}</p>
             </div>
            
-            <label for="my-modal-3" class="btn btn-primary" onclick="loadNewsDetails('${category._id}')">Show Details</label>
+            <label for="my-modal-3" class="btn btn-md btn-primary" onclick="loadNewsDetails('${category._id}')">Show Details</label>
             </div>
         </div>
     </div>`

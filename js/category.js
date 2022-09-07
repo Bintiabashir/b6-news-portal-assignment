@@ -72,7 +72,7 @@ const displayCategoriesNews = (categories, categoryName) => {
 
     categories.forEach(category => {
         const categoriesDiv = document.createElement('div');
-        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-xl m-7 h-full">
+        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-2xl m-7 h-full">
         <img src="${category.thumbnail_url}" class="m-5" />
         <div class="card-body">
             <h2 class="card-title">${category.title.length > 60 ? category.title.slice(0, 60) + '...' : category.title}</h2>

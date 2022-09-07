@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="container mx-auto px-24 ">
+<body class="container mx-auto px-24 bg-stone-100 min-h-screen ">
 
     <header>
         <!-- navbar  -->
@@ -26,7 +26,7 @@
                     Time</a>
             </div>
             <div class="flex-none">
-                <ul class="menu menu-horizontal p-0 text-zinc-400">
+                <ul class="menu menu-horizontal p-0 text-zinc-500">
                     <li><a href="index.html">News</a></li>
                     <!-- blog-modal  -->
                     <li>
@@ -48,7 +48,7 @@
 
         <hr>
         <!-- menu of news-categories -->
-        <div id="news-categories-name" class="flex justify-evenly py-5 text-zinc-500">
+        <div id="news-categories-name" class="flex justify-evenly py-5">
 
         </div>
     </header>
@@ -58,10 +58,30 @@
         <section>
 
             <!-- founded items -->
-            <div id="founded-data" class="height-5 bg-violet-500 p-3 px-7 rounded m-4 text-white">
+            <div id="founded-data" class="height-5 bg-white p-3 px-7 rounded m-4 font-semibold">
                 no data found
             </div>
 
+            <div class="flex justify-between mx-5 items-center">
+                <div class="font-bold">
+                    Sort By View:
+                    <ul class="menu menu-horizontal p-0 m-2 bg-white">
+                        <li tabindex="0">
+                            <a class="font-medium text-zinc-400">
+                                Default
+                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 12 24">
+                                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-outline btn-primary mr-1">Today's Pick</button>
+                    <button class="btn btn-sm btn-outline btn-primary">Trending</button>
+                </div>
+            </div>
         </section>
 
         <!-- spinner  -->

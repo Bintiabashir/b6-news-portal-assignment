@@ -15,16 +15,29 @@ const loadNewsName = async () => {
 
 const displayNewsName = newsNames => {
     const newsCategoriesName = document.getElementById('news-categories-name');
-    newsNames.forEach(name => {
+    newsNames.forEach(newsName => {
         const nameBtn = document.createElement('button');
-        nameBtn.setAttribute('onclick', `loadCategoriesNews('${name.category_id}','${name.category_name}')`);
+        nameBtn.classList.add('categori-name', 'btn-md', 'btn-outline', 'btn-accent');
+
+        nameBtn.setAttribute('onclick', `loadCategoriesNews('${newsName.category_id}','${newsName.category_name}')`);
+        nameBtn.innerText = newsName.category_name;
+        newsCategoriesName.appendChild(nameBtn);
 
 
-
-        nameBtn.innerText = name.category_name;
-        newsCategoriesName.appendChild(nameBtn)
     });
 
+    const names = document.getElementsByClassName("categori-name");
+    let nameArray = [];
+    for (const name of names) {
+        nameArray.push(name);
+
+        name.addEventListener("click", (event) => {
+            nameArray.forEach(nameOfArray => {
+                nameOfArray.style.color = "";
+            })
+            event.target.style.color = 'purple';
+        })
+    }
 }
 
 // news load  
@@ -59,9 +72,8 @@ const displayCategoriesNews = (categories, categoryName) => {
 
     categories.forEach(category => {
         const categoriesDiv = document.createElement('div');
-
-        categoriesDiv.innerHTML = `<div class="card card-compact bg-base-100 shadow-xl m-7 h-full">
-        <img src="${category.image_url}" class="h-2/5 w-full" />
+        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-xl m-7 h-full">
+        <img src="${category.thumbnail_url}" class="m-5" />
         <div class="card-body">
             <h2 class="card-title">${category.title.length > 60 ? category.title.slice(0, 60) + '...' : category.title}</h2>
             <p>${category.details.length > 100 ? category.details.slice(0, 100) + '...' : category.details}</p>

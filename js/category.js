@@ -63,12 +63,14 @@ const displayCategoriesNews = (categories, categoryName) => {
 
 
     const foundedData = document.getElementById('founded-data');
-    foundedData.innerText = `${categories.length == 0 ? "no" : categories.length} items found for this category ${categoryName}`
+    foundedData.innerText = `${categories.length == 0 ? "no" : categories.length} items found for category ${categoryName}`
 
 
 
     const newsCategoriesContainer = document.getElementById('news-categories-container');
     newsCategoriesContainer.textContent = '';
+
+    categories.sort((s1, s2) => s2.total_view - s1.total_view);
 
     categories.forEach(category => {
         const categoriesDiv = document.createElement('div');
@@ -180,5 +182,5 @@ function displayBlog() {
 
 
 
-
+loadCategoriesNews('08', 'All News');
 loadNewsName();

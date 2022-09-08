@@ -18,7 +18,7 @@ const displayNewsName = newsNames => {
     const newsCategoriesName = document.getElementById('news-categories-name');
     newsNames.forEach(newsName => {
         const nameBtn = document.createElement('button');
-        nameBtn.classList.add('categori-name', 'btn-md', 'btn-outline', 'btn-accent');
+        nameBtn.classList.add('categori-name', 'md:btn-md', 'btn-sm', 'btn-outline', 'btn-accent');
 
         nameBtn.setAttribute('onclick', `loadCategoriesNews('${newsName.category_id}','${newsName.category_name}')`);
         nameBtn.innerText = newsName.category_name;
@@ -74,13 +74,13 @@ const displayCategoriesNews = (categories, categoryName) => {
 
     categories.forEach(category => {
         const categoriesDiv = document.createElement('div');
-        categoriesDiv.innerHTML = `<div class="card lg:card-side bg-base-100 shadow-xl m-7 h-full">
+        categoriesDiv.innerHTML = `<div class="card lg:card-side card-compact bg-base-100 shadow-xl m-7 h-fit">
         <img src="${category.thumbnail_url}" class="m-5">
         <div class="card-body">
-            <h2 class="card-title font-bold">${category.title.length > 100 ? category.title.slice(0, 100) + '...' : category.title}</h2>
-            <p class="text-gray-500">${category.details.length > 500 ? category.details.slice(0, 500) + '...' : category.details}</p>
+            <h2 class="card-title font-bold">${category.title.length > 50 ? category.title.slice(0, 50) + '...' : category.title}</h2>
+            <p class="text-gray-500">${category.details.length > 200 ? category.details.slice(0, 200) + '...' : category.details}</p>
             
-            <div class="card-actions justify-between items-center">
+            <div class="card-actions md:justify-between items-center mt-3 justify-around">
             <div class='flex items-center'>
             <img src='${category.author.img}'class="w-10 rounded-full h-10 mr-2" alt="">
                 <div>

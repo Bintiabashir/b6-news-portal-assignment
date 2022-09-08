@@ -15,29 +15,33 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="container mx-auto px-24 bg-stone-100 min-h-screen ">
+<body class="md:container md:mx-auto md:px-24 bg-stone-100 min-h-screen ">
 
     <!-- header  -->
     <header>
+
         <!-- navbar  -->
         <nav class="navbar">
-            <div class="flex-1">
+
+            <div class="flex-1 px-4">
                 <a class=" text-xl font-bold"><span class=" text-violet-500 ">News
                     </span>
                     Time</a>
             </div>
+
             <div class="flex-none">
                 <ul class="menu menu-horizontal p-0 text-zinc-500">
                     <li><a href="index.html">News</a></li>
                     <li><a href="blog.html">Blogs</a></li>
                 </ul>
             </div>
+
         </nav>
 
         <hr>
 
         <!-- menu of news-categories -->
-        <div id="news-categories-name" class="flex justify-evenly py-5">
+        <div id="news-categories-name" class="flex justify-evenly py-5 flex-wrap md:flex-nowrap">
 
         </div>
     </header>
@@ -52,8 +56,8 @@
                 no data found
             </div>
             <!-- sort by view and Trending parts -->
-            <div class="flex justify-between mx-5 items-center">
-                <div class="font-bold">
+            <div class="md:flex md:justify-between mx-5  md:items-center">
+                <div class="font-bold m-4 flex items-center md:flex-none">
                     Sort By View:
                     <ul class="menu menu-horizontal p-0 m-2 bg-white">
                         <li tabindex="0">
@@ -67,8 +71,8 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <button class="btn btn-sm btn-outline btn-primary mr-1">Today's Pick</button>
+                <div class="flex justify-between md:flex-none">
+                    <button class="btn btn-sm btn-outline btn-primary mr-3">Today's Pick</button>
                     <button class="btn btn-sm btn-outline btn-primary">Trending</button>
                 </div>
             </div>
@@ -81,7 +85,7 @@
 
         <!-- news-container  -->
 
-        <section id="news-categories-container" class="grid grid-cols-1 gap-4 pb-72">
+        <section id="news-categories-container" class="grid grid-cols-1 gap-4 md:pb-32 pb-20">
         </section>
 
         <!-- modal  -->
@@ -102,7 +106,7 @@
     </main>
 
     <!-- footer  -->
-    <footer class="footer footer-center z-10 font-semibold p-4 text-zinc-400">
+    <footer class="footer footer-center z-10 font-semibold p-4 text-zinc-400 pt-80">
         <div>
             <p>Copyright © 2022 - All right reserved by News Time</p>
         </div>

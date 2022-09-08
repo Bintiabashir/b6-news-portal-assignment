@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title  -->
+    <title>News Time</title>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyUI cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="container mx-auto px-24 bg-stone-100 min-h-screen ">
+
+    <!-- header  -->
+    <header>
+
+        <!-- navbar  -->
+        <nav class="navbar">
+
+            <div class="flex-1">
+                <a class=" text-xl font-bold"><span class=" text-violet-500 ">News
+                    </span>
+                    Time</a>
+            </div>
+
+            <div class="flex-none">
+                <ul class="menu menu-horizontal p-0 text-zinc-500">
+                    <li><a href="index.html">News</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <hr>
+
+    </header>
+
+    <!-- main section  -->
+    <main>
+
+        <h1 class="text-center my-12 font-bold text-2xl text-violet-500">Welcome to the Blog Page</h1>
+
+        <section>
+
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+
+                <div class="collapse-title text-xl font-medium">
+                    1. Why we use template string in JavaScript?
+                </div>
+
+                <div class="collapse-content text-zinc-500">
+                    <p>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                        insert variables and expressions into strings without needing to concatenate like in
+                        older versions of JavaScript.By using it, we can easily write multiline code. It allows us to
+                        create strings that are complex and contain
+                        dynamic elements.</p>
+                </div>
+
+            </div>
+
+
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+
+                <div class="collapse-title text-xl font-medium">
+                    2. What is the difference between map(), find(), filter() and forEach() in JavaScript?
+                </div>
+
+                <div class="collapse-content text-zinc-500">
+                    <p>The main difference between map() and forEach() is that the map() method returns a new array by
+                        applying the callback function on each element of an array, while the forEach() method doesn't
+                        return anything.Whereas filter() method creates a new array by removing elements that don't
+                        belong and returns an array of all matching elements.On the other hand, find() method returns
+                        the
+                        first matching element.</p>
+                </div>
+
+            </div>
+
+
+            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+
+                <div class="collapse-title text-xl font-medium">
+                    3. What is the difference between var, let and const in JavaScript?
+                </div>
+
+                <div class="collapse-content text-zinc-500">
+                    <p>var and let can be updated and re-assigned into the scope but const cannot be updated or
+                        re-assigned into the scope.The scope of a var variable is functional whereas the scope of
+                        a let and const variable is block scope.let is lying between var and const, it contains
+                        properties of both.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>
